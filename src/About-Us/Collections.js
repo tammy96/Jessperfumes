@@ -6,14 +6,15 @@ const Collections = () => {
     return (
         <>
             <section className="bg-secondlightpink font-unna py-12 px-6">
-                <div className="w-full flex flex-col-reverse lg:flex-row lg:justify-between gap-3">
-                <img src={ aboutImage4} alt="about image 4" className="md:w-[50vw]" />
-                    <div>
+                <div className="w-full flex flex-col-reverse md:flex-row md:justify-between gap-3">
+                {/* <img src={ aboutImage4} alt="about image 4" className="md:w-[50vw]" /> */}
+                <img src={ aboutImage4} alt="about image 4" className="w-[100%] md:w-[50%]" />
+                    <div className="md:w-[50%]">
                         <h3 className="text-lg text-navgold mb-3">
                             <i>Jess Varieties</i>
                         </h3>
 
-                        <div className="md:max-w-2xl">
+                        <div className="w-full md:max-w-2xl">
                         <h1 className="text-4xl md:text-6xl text-slate-600 mb-8">
                         Warm Sensation and Delightful
                         </h1>
@@ -23,7 +24,7 @@ const Collections = () => {
                             nec ullamcorper mattis, pulvinar dapibus leo.
                         </p>
                         </div>
-                        <img src={aboutImage3 } alt="about image 3" className="md:w-[32vw]" />
+                        <img src={aboutImage3 } alt="about image 3" className="md:w-[39vw]" />
                     </div>
                     
                 </div>

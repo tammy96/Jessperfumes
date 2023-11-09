@@ -8,13 +8,13 @@ import jesslogo from "./Jess Images/footerjesslogo.png"
 const Footer = () => {
 
     return (
-        <div className="bg-navpurple w-full py-12 px-6 md:px-2">
+        <div className="bg-navpurple w-full py-12 px-6 md:px-2 text-slate-300">
             <div className="flex flex-col items-center text-white text-center gap-6 pb-8">
-            <img src={logofooter } alt="footer logo" className="w-28 md:w-44" />
-                <h1 className="text-3xl md:text-6xl font-extralight font-unna">
+            <img src={logofooter } alt="footer logo" className="w-28 opacity-80 md:w-44" />
+                <h1 className="text-3xl text-slate-300 md:text-6xl font-extralight font-unna">
                 The Ideal Fragrance. 
                 </h1>
-                <p className="font-serif text-md md:text-xl md:max-w-4xl">
+                <p className="font-serif text-slate-300 text-md md:text-xl md:max-w-4xl">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Ut elit tellus, luctus nec ullamcorper mattis,
                     pulvinar dapibus leo.
@@ -55,7 +55,7 @@ const Footer = () => {
                 <li>Terms & Services</li>
                 </ul>
 
-                <img src={ jesslogo} alt="footer logo icon" />
+                <img src={ jesslogo} alt="footer logo icon" className="opacity-80" />
                 
                 <p className="text-lg text-slate-300">
                 Copyright © 2023 Jess Perfume & Fragrances, All rights reserved.

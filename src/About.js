@@ -1,13 +1,14 @@
 import aboutImage1 from "./Jess Images/about-us image1.1.jpg"
 import { Link } from "react-router-dom"
 import Collections from "./About-Us/Collections"
+import Gallery from "./About-Us/Gallery"
 
 const About = () => {
 
     return (
         <div>
         <section className="w-full bg-navpurple font-serif relative">
-        <h1 className="font-unna text-slate-200 mx-auto w-fit py-36 text-4xl md:text-8xl relative line">
+        <h1 className="font-unna text-slate-200 mx-auto w-fit py-24 md:py-36 text-6xl md:text-8xl relative line">
             About Us
             {/* <h2 className="line"></h2> */}
         </h1>
@@ -15,7 +16,7 @@ const About = () => {
             </section>
             
             <section className="font-unna text-black py-12">
-            <div className="flex flex-col-reverse gap-4 flex-wrap w-full px-3 md:flex-row md:items-center  md:justify-between">
+            <div className="flex flex-col-reverse gap-y-4 w-full px-3 md:flex-row md:items-center  md:justify-between">
                 <div className="flex flex-col gap-4">
                     <h2 className="text-3xl md:text-6xl font-bold font-unna">
                         Your Scent Our Responsibility
@@ -31,13 +32,17 @@ const About = () => {
                 <Link to="" className="w-fit px-6 py-3 bg-navpurple text-white text-2xl">see our collections</Link>       
                 </div>
                     </div>
-                    <img src={ aboutImage1} alt="first image" className="md:full"/>
+                    <img src={ aboutImage1} alt="first image" className="md:w-[50%]"/>
                 </div>
 
             </section>
 
             <section>
             <Collections />
+            </section>
+
+            <section>
+                <Gallery />
             </section>
 
         </div>

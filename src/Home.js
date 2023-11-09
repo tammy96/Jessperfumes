@@ -39,7 +39,7 @@ const Home = () => {
                 
                 <div className="flex flex-col mx-6 my-24 md:flex-row justify-between gap-4 lg:mx-24">
                 <img src={homeImage1} alt="about us" className="w-full md:w-1/3"/>
-                    <div className="max-w-3xl font-serif text-black space-y-8">
+                    <div className="md:max-w-3xl w-full font-serif text-black space-y-8">
                         <h1 className="text-4xl md:text-6xl">Our Fragrance Journey at Jess Perfume & Fragrance</h1>
                         <p className="text-md mt-6">
                             At Jess Perfume & Fragrance, our passion lies in crafting scents
