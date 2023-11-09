@@ -1,6 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: -apple-system, BlinkMacSystemFont, 'Heebo', sans-serif, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -11,3 +15,115 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* tailwind.css */
+@layer utilities {
+  .before::before {
+    content: '';
+    display: block;
+    /* Add your styles for ::before pseudo-element */
+  }
+
+  .after::after{
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 2px;
+    background-color: transparent;
+    top: 35px;
+    bottom: 0px;
+    left: 0px;
+}
+
+  .after:hover::after{
+    width: 100%;
+    transition: 300ms width;
+    background-color: #daa520;
+}
+
+/* Custom CSS or within a style tag */
+/* Custom CSS */
+@keyframes lineAnimation {
+  from {
+    height: 0; /* Start with 0 height */
+    top: 100%; /* Start from the middle */
+}
+to {
+    height: 4rem; /* End with full height */
+    top: 100%; /* End at the bottom */
+}
+}
+
+.line::after {
+  content: "";
+  position: absolute; /* Position the line absolutely */
+  top: 50%; /* Align to the middle initially */
+  left: 50%; /* Center the line horizontally */
+  transform: translate(-50%, -50%); /* Adjust for centering */
+  width: 4px; /* Width of the line */
+  background-color: #daa520; /* Color of the line */
+  animation: lineAnimation 1s ease-in forwards; /* Apply the animation */
+  z-index: 10;
+}
+
+
+/* hamburger menu */
+@keyframes burn {
+  0% {
+      width: 100%;
+      opacity: 1;
+  }
+  100% {
+      width: 0;
+      opacity: 0;
+  }
+}
+
+
+@keyframes heal {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+#hamburger-icon span {
+  transition: transform 0.5s;
+}
+
+/* #hamburger-icon:hover #line1 {
+  animation: burn 0.6s forwards;
+  animation-delay: 0s;
+}
+
+#hamburger-icon:hover #line2 {
+  animation: burn 0.6s forwards;
+  animation-delay: 0.2s;
+}
+
+#hamburger-icon:hover #line3 {
+  animation: burn 0.6s forwards;
+  animation-delay: 0.4s;
+} */
+
+
+#hamburger-icon:hover #line1 {
+  transform: translateY(10px) rotate(-45deg);
+  animation: heal 0.6s forwards;
+}
+
+#hamburger-icon:hover #line2 {
+  opacity: 0;
+}
+
+#hamburger-icon:hover #line3 {
+  transform: translateY(-10px) rotate(45deg);
+  animation: heal 0.6s forwards;
+}
+
+
+
+}
+
