@@ -39,8 +39,8 @@ const Home = () => {
                 
                 <div className="flex flex-col mx-6 my-24 md:flex-row justify-between gap-4 lg:mx-24">
                 <img src={homeImage1} alt="about us" className="w-full md:w-1/3"/>
-                    <div className="md:max-w-3xl w-full font-serif text-black space-y-8">
-                        <h1 className="text-4xl md:text-6xl">Our Fragrance Journey at Jess Perfume & Fragrance</h1>
+                    <div className="max-w-prose md:max-w-3xl w-full font-serif text-black space-y-8">
+                        <h1 className="text-3xl md:text-6xl">Our Fragrance Journey at Jess Perfume & Fragrance</h1>
                         <p className="text-md mt-6">
                             At Jess Perfume & Fragrance, our passion lies in crafting scents
                             that transcend time, redefining elegance with a deep appreciation
@@ -53,8 +53,9 @@ const Home = () => {
                             enhancing your presence and reflecting your unique lifestyle. Experience the
                             essence of elegance woven into every fragrance at Jess Perfume & Fragrance."
                         </p>
-                        <div className="mt-6">
-                        <Link to="" className="w-fit px-6 py-3 bg-navpurple text-white text-2xl">Discover More</Link>  
+                        <div className="mt-6 flex flex-col items-center md:items-start md:px-6 py-3 w-full md:w-fit bg-navpurple text-white text-xl">
+                            Discover More
+                        {/* </p> */}
                         </div>
                    </div>
                    
