@@ -11,6 +11,7 @@ import instagramfooter from "../Jess Images/instagramfooter.png"
 import locationicon from "../Jess Images/locationlogo.png"
 import messageicon from "../Jess Images/messageicon.png"
 import phonelogo from "../Jess Images/phone icon (1).png"
+import { Link } from "react-router-dom";
 
 const NavModal = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,8 +32,19 @@ const NavModal = (props) => {
         className={`w-72 md:w-[25vw] fixed top-0 right-0 bg-navpurple h-screen z-[1000]
           ${isOpen ? "translate-x-0" : "translate-x-full"} ease-in-out duration-300`}
           >
-              <img src={closeicon} alt="close icon" className="w-6 absolute top-12 right-8 cursor-pointer" onClick={props.showModal} />
-              <div className="flex flex-col gap-4 items-center mt-36">
+        <img src={closeicon} alt="close icon" className="w-4 absolute top-6 right-6 cursor-pointer" onClick={props.showModal} />
+        <ul className="flex flex-col gap-4 items-center mt-16">
+          <li onClick={props.showModal}>
+            <Link className="text-slate-300 text-3xl font-unna" to="/">Home</Link>
+          </li>
+          <li onClick={props.showModal}>
+            <Link className="text-slate-300 text-3xl font-unna" to="/about">About</Link>
+          </li>
+          <li onClick={props.showModal}>
+            <Link className="text-slate-300 text-3xl font-unna" to="/">Contact</Link>
+          </li>
+        </ul>
+              <div className="flex flex-col gap-4 items-center mt-16">
                   <img src={logofooter} alt="logo footer" className="w-24 md:w-36" />
                   <h2 className="font-unna text-slate-300 text-xl max-w-xs text-center">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
